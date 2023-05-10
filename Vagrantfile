@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
     cpus = `wmic cpu get NumberOfCores`.split("\n")[2].to_i
     mem = `wmic OS get TotalVisibleMemorySize`.split("\n")[2].to_i / 1024 * mem_ratio
   end
-
+  config.vm.boot_timeout = 1800
   # Provision the "MiniNetVirtualMachine"
   config.vm.define :mnvm do |mnvm|
     mnvm.vm.box = "ubuntu/focal64"
