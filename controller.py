@@ -6,11 +6,12 @@
 
 import json
 import sys
+import os
 
 from pox.core import core
 
-sys.path.append('/home/vagrant')
-import route # /home/vagrant/route.py
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+import route # route.py
 
 log = core.getLogger()
 

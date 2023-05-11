@@ -1,8 +1,5 @@
 set -ex
 sudo apt-get update; sudo apt-get -y upgrade
-pwd
-echo "pwd: $(pwd)"
-echo $HOME
 git clone https://github.com/NetSP-KAIST/mininet.git
 ./mininet/util/install.sh -nfvp
 ln -s /vagrant/*.py /home/vagrant/
