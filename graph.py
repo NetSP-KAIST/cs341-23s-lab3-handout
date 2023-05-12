@@ -19,6 +19,8 @@ def gen_graph(task=1):
         
         switches = ['s{}'.format(i) for i in range(1, 1+switch)]
         hosts = ['h{}'.format(i) for i in range(1, 1+host)]
+        switchneighbors = {s:set() for s in switches}
+        
         # generate random tree topology
         # First, connect switches in random order
         switchorder = list(switches)
